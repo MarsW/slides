@@ -53,3 +53,6 @@ transition : fade
 
 slide-number : true
 vertical-center : false
+
+print-fragments : true
+code-line-numbers : true

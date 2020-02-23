@@ -1,0 +1,6 @@
+fi = open("image.jpg","rb")
+fo = open("image2.jpg","wb")
+content = fi.read()
+fo.write(content)
+fi.close()
+fo.close()

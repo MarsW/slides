@@ -336,6 +336,7 @@ div.slide1 h1 {
 code.hljs {
     font-size: 90% !important;
     background: #F0F0F0 !important;
+    margin: 10px 0px !important;
 }
 .reveal .slides section .code-presenting-annotation {
     background: #303030 !important;
@@ -355,6 +356,11 @@ ul.para {
 ul.para_p {
   text-align: left !important;
   line-height:50px !important;
+}
+ul.para_n {
+  text-align: left !important;
+  line-height:50px !important;
+  list-style-type: none !important;
 }
 
 .li-nested-item {
