@@ -15,6 +15,8 @@
 
 ---?include=chapters/crawler/knowledge/req_resp/PITCHME.md
 
+---?include=chapters/crawler/knowledge/html_xpath/PITCHME.md
+
 ---?include=chapters/crawler/yahoo_stock_js/PITCHME.md
 ---
 @title[資料正確性]
