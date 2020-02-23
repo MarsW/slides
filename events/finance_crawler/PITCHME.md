@@ -131,10 +131,10 @@ for stock_id in [2330,2317]:
 ```
 
 Note:
-[解答](codes/function_fund_bot.py)
+[解答](https://github.com/MarsW/slides/blob/master/codes/function_fund_bot.py)
 +++
 @title[爬蟲合併]
-如果把台灣銀行、台灣證交所的爬蟲合併，就會如同 codes/function_finance.py  
+如果把台灣銀行、台灣證交所的爬蟲合併，就會如同 [function_finance.py](https://github.com/MarsW/slides/blob/master/codes/function_finance.py)  
 函式的好處：除了更容易閱讀，要除錯(debug)、優化也容易針對部分程式碼，不怕改錯地方，例如如果我擔心網路不穩定，想先把爬蟲獲取各網址中的資料留存下來，之後再進行解析就可以做以下的改寫。
 
 ```python 
