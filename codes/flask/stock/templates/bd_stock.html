@@ -1,0 +1,69 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+</head>
+{% extends "bootstrap/base.html" %}
+{% block title %}股票網站{% endblock %}
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle"
+            data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">導覽</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">股票網站</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/">首頁</a></li>
+                <li><a href="/stock_list">股票列表</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="page-header">
+        <h1>股票代碼: {{ stock_id }}</h1>
+        <table class="table" id="stock_table">
+            <thead>
+                <tr>
+                    <th>日期</th>
+                    <th>開盤價</th>
+                    <th>最高價</th>
+                    <th>最低價</th>
+                    <th>收盤價</th>
+                    <th>成交量</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in datas %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td>{{ row[4] }}</td>
+                    <td>{{ row[5] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#stock_table').DataTable();
+} );
+</script>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}股票網站{% endblock %}
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle"
+            data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">導覽</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">股票網站</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/">首頁</a></li>
+                <li><a href="/stock_list">股票列表</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="page-header">
+        Welcome to Stock Board 
+        <br> 
+        <a href='/stock/2330'>進入2330股票頁(路徑)</a> 
+        <br> 
+        <a href='/stock?stock_id=2330'>進入2330股票頁(參數)</a>
+    </div>
+</div>
+{% endblock %}

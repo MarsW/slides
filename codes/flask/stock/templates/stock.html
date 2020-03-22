@@ -1,0 +1,26 @@
+<h1>股票代碼: {{ stock_id }}</h1>
+<a href='/'>回首頁</a>
+<table>
+    <thead>
+        <tr>
+            <th>日期</th>
+            <th>開盤價</th>
+            <th>最高價</th>
+            <th>最低價</th>
+            <th>收盤價</th>
+            <th>成交量</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in datas %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+            <td>{{ row[5] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
